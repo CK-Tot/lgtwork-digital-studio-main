@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <rect width="400" height="400" rx="80" fill="#2563EB"/>
+  <rect x="110" y="150" width="40" height="190" rx="20" fill="#FFFFFF" transform="rotate(-14 130 245)"/>
+  <rect x="180" y="124" width="40" height="220" rx="20" fill="#FFFFFF" transform="rotate(-14 200 234)" opacity="0.62"/>
+  <rect x="250" y="100" width="40" height="248" rx="20" fill="#FFFFFF" transform="rotate(-14 270 224)" opacity="0.28"/>
+</svg>

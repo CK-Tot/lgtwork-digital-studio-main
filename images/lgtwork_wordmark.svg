@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 160" width="700" height="160">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&amp;family=DM+Sans:wght@400&amp;display=swap');
+  </style>
+  <rect width="700" height="160" fill="#FFFFFF"/>
+  <!-- Icon -->
+  <rect x="20" y="20" width="80" height="80" rx="12" fill="#0A0A0A"/>
+  <rect x="38" y="38" width="14" height="46" rx="7" fill="#FFFFFF" transform="rotate(-14 45 61)"/>
+  <rect x="58" y="30" width="14" height="56" rx="7" fill="#2563EB" transform="rotate(-14 65 58)"/>
+  <rect x="78" y="22" width="14" height="66" rx="7" fill="#2563EB" transform="rotate(-14 85 55)" opacity="0.52"/>
+  <!-- Wordmark -->
+  <text x="118" y="72" font-family="'Syne', sans-serif" font-size="52" font-weight="800" fill="#0A0A0A" letter-spacing="2">LGTWORK</text>
+  <line x1="118" y1="82" x2="660" y2="82" stroke="#2563EB" stroke-width="3"/>
+  <text x="118" y="104" font-family="'DM Sans', sans-serif" font-size="14" font-weight="400" fill="#AAAAAA" letter-spacing="6">LIGHTWORK · JUBA</text>
+</svg>
