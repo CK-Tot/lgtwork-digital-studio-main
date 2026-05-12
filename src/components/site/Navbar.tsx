@@ -42,7 +42,7 @@ export function Navbar() {
               className="grid h-7 w-7 place-items-center rounded-md text-white text-xs overflow-hidden"
               style={{ background: "var(--rust)" }}
             >
-              <img src="/public/images/lgtwork_icon_blue.svg" alt="LGTWork" />
+              <img src="/images/lgtwork_icon_blue.svg" alt="LGTWork" />
             </span>
             <span>LGTWORK</span>
           </Link>

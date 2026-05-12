@@ -107,7 +107,7 @@ function Hero() {
           >
             <div className="relative rounded-3xl border border-border bg-gradient-to-br from-terracotta/5 to-gold/5 p-2 shadow-xl">
               <img
-                src="/public/images/hero-image.jpg"
+                src="/images/hero-image.jpg"
                 alt="Our team collaborating"
                 className="rounded-2xl object-cover w-full h-auto"
               />
