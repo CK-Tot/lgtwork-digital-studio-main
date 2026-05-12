@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <Link to="/" className="flex items-center gap-2 text-lg font-semibold">
-              <span className="grid h-8 w-8 place-items-center rounded-md bg-[image:var(--gradient-brand)] text-white"><img src="/images/lgtwork_icon_blue.svg" alt="" /></span>
+              <span className="grid h-8 w-8 place-items-center rounded-md bg-[image:var(--gradient-brand)] text-white"><img src="/public/images/lgtwork_icon_blue.svg" alt="" /></span>
               LGTWork
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
