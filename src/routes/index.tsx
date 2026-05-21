@@ -40,11 +40,10 @@ function HomePage() {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      {/* Soft background blob – terracotta & gold */}
+      {/* Soft background blob – neutral blue accent */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-r from-terracotta/20 via-gold/10 to-transparent blur-3xl"
-        style={{ background: "radial-gradient(circle, rgba(217,108,74,0.15) 0%, rgba(230,160,23,0.05) 100%)" }}
+        className="pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-r from-primary/20 via-primary/5 to-transparent blur-3xl"
       />
 
       <div className="container-page relative pt-12 md:pt-20">
@@ -55,14 +54,9 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {/* <span className="inline-flex items-center gap-2 rounded-full border border-terracotta/30 bg-terracotta/10 px-3 py-1 text-xs text-terracotta">
-              <Sparkles className="h-3 w-3" />
-              We’re ready to help you grow
-            </span> */}
-
             <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Turning Ideas Into Powerful <br />
-              <span className="bg-gradient-to-r from-terracotta to-gold bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
                  Digital Experiences.
               </span>
             </h1>
@@ -75,7 +69,6 @@ function Hero() {
               <Link
                 to="/contact"
                 className="btn-primary"
-                // No inline style needed – .btn-primary uses gradient-brand now
               >
                 Book a free call <ArrowUpRight className="h-4 w-4" />
               </Link>
@@ -90,7 +83,7 @@ function Hero() {
                 {[1, 2, 3].map((i) => (
                   <div
                     key={i}
-                    className="h-6 w-6 rounded-full border-2 border-background bg-gradient-to-br from-terracotta/60 to-rust/40"
+                    className="h-6 w-6 rounded-full border-2 border-background bg-gradient-to-br from-primary/60 to-primary/40"
                   />
                 ))}
               </div>
@@ -105,7 +98,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative"
           >
-            <div className="relative rounded-3xl border border-border bg-gradient-to-br from-terracotta/5 to-gold/5 p-2 shadow-xl">
+            <div className="relative rounded-3xl border border-border bg-gradient-to-br from-primary/5 to-secondary p-2 shadow-xl">
               <img
                 src="/images/hero-image.jpg"
                 alt="Our team collaborating"
@@ -139,12 +132,10 @@ function DashboardMockup() {
               {["Overview", "Projects", "Clients", "Reports", "Settings"].map((item, idx) => (
                 <div
                   key={item}
-                  className={`flex items-center gap-2 rounded-lg px-3 py-2 text-xs ${idx === 0 ? "text-foreground" : "text-muted-foreground"}`}
-                  style={idx === 0 ? { background: "rgba(217,108,74,0.1)" } : {}}
+                  className={`flex items-center gap-2 rounded-lg px-3 py-2 text-xs ${idx === 0 ? "text-foreground bg-primary/10" : "text-muted-foreground"}`}
                 >
                   <span
-                    className="h-1.5 w-1.5 rounded-full"
-                    style={{ background: "var(--terracotta)" }}
+                    className="h-1.5 w-1.5 rounded-full bg-primary"
                   />
                   {item}
                 </div>
@@ -160,7 +151,7 @@ function DashboardMockup() {
               <div key={s.label} className="rounded-xl border border-border bg-black/20 p-4">
                 <p className="text-[11px] uppercase tracking-wider text-muted-foreground">{s.label}</p>
                 <p className="mt-2 text-2xl font-semibold">{s.value}</p>
-                <p className="mt-1 text-xs" style={{ color: "var(--terracotta)" }}>{s.delta}</p>
+                <p className="mt-1 text-xs text-primary">{s.delta}</p>
               </div>
             ))}
             <div className="md:col-span-3">
@@ -169,12 +160,12 @@ function DashboardMockup() {
                 <svg viewBox="0 0 600 160" className="mt-3 h-32 w-full">
                   <defs>
                     <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0%" stopColor="var(--terracotta)" stopOpacity="0.4" />
-                      <stop offset="100%" stopColor="var(--terracotta)" stopOpacity="0" />
+                      <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                   <path d="M0 130 C 60 100, 110 110, 160 80 S 280 30, 340 60 S 460 120, 520 70 S 600 30, 600 30 L 600 160 L 0 160 Z" fill="url(#g1)" />
-                  <path d="M0 130 C 60 100, 110 110, 160 80 S 280 30, 340 60 S 460 120, 520 70 S 600 30, 600 30" fill="none" stroke="var(--terracotta)" strokeWidth="2" />
+                  <path d="M0 130 C 60 100, 110 110, 160 80 S 280 30, 340 60 S 460 120, 520 70 S 600 30, 600 30" fill="none" stroke="var(--primary)" strokeWidth="2" />
                 </svg>
               </div>
             </div>
@@ -214,9 +205,9 @@ function TrustedBy() {
             key={item.name}
             className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-background to-card p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
-            <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-terracotta/10 blur-xl transition-opacity group-hover:bg-terracotta/20" />
+            <div className="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-primary/10 blur-xl transition-opacity group-hover:bg-primary/20" />
             <div className="relative flex flex-col items-center text-center">
-              <div className="rounded-full bg-terracotta/10 p-2 text-terracotta">
+              <div className="rounded-full bg-primary/10 p-2 text-primary">
                 <item.icon className="h-5 w-5" />
               </div>
               <h3 className="mt-3 text-sm font-medium">{item.name}</h3>
@@ -254,15 +245,15 @@ function ServicesPreview() {
       {featuredServices.map((service, i) => (
         <div key={service.title} className="grid items-center gap-16 md:grid-cols-2">
           <div className={i % 2 === 1 ? "md:order-2" : ""}>
-            <div className="overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900">
+            <div className="overflow-hidden rounded-3xl border border-border bg-surface">
               <img src={service.image} alt={service.title} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
             </div>
           </div>
           <div className={i % 2 === 1 ? "md:order-1" : ""}>
-            <span className="text-sm uppercase tracking-[0.2em] text-terracotta">Services</span>
-            <h2 className="mt-4 text-4xl font-semibold text-white md:text-5xl">{service.title}</h2>
-            <p className="mt-6 max-w-lg text-lg text-zinc-400">{service.description}</p>
-            <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-terracotta">
+            <span className="text-sm uppercase tracking-[0.2em] text-primary">Services</span>
+            <h2 className="mt-4 text-4xl font-semibold text-foreground md:text-5xl">{service.title}</h2>
+            <p className="mt-6 max-w-lg text-lg text-muted-foreground">{service.description}</p>
+            <Link to="/services" className="mt-8 inline-flex items-center gap-2 text-primary">
               Learn more <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -292,8 +283,7 @@ function FeaturedWork() {
                 <img src={p.cover} alt={p.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
                 <span
-                  className="absolute left-4 top-4 rounded-full border border-white/20 px-3 py-1 text-xs backdrop-blur"
-                  style={{ background: "rgba(217,108,74,0.25)", color: "#fff" }}
+                  className="absolute left-4 top-4 rounded-full border border-white/20 px-3 py-1 text-xs backdrop-blur bg-primary/25 text-white"
                 >
                   {p.category}
                 </span>
@@ -327,7 +317,7 @@ function Process() {
         {steps.map((s, i) => (
           <Reveal key={s.n} delay={i * 0.05}>
             <div className="relative h-full rounded-2xl border border-border bg-[color:var(--surface)]/40 p-6">
-              <span className="text-sm" style={{ color: "var(--terracotta)" }}>{s.n}</span>
+              <span className="text-sm text-primary">{s.n}</span>
               <h3 className="mt-3 text-xl font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
             </div>
@@ -337,7 +327,7 @@ function Process() {
       <div className="mt-12 grid grid-cols-2 gap-6 rounded-3xl border border-border bg-[color:var(--surface)]/40 p-8 md:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label}>
-            <p className="text-3xl font-semibold md:text-4xl" style={{ color: "var(--terracotta)" }}>{s.value}</p>
+            <p className="text-3xl font-semibold text-primary md:text-4xl">{s.value}</p>
             <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.label}</p>
           </div>
         ))}
@@ -354,7 +344,7 @@ function Testimonials() {
         {testimonials.map((t, i) => (
           <Reveal key={i} delay={i * 0.05}>
             <figure className="h-full rounded-2xl border border-border bg-[color:var(--surface)]/40 p-6">
-              <div className="flex gap-1" style={{ color: "var(--gold)" }}>
+              <div className="flex gap-1 text-primary">
                 {Array.from({ length: 5 }).map((_, k) => (
                   <Star key={k} className="h-3.5 w-3.5 fill-current" />
                 ))}
@@ -395,8 +385,7 @@ function FAQSection() {
                     {isOpen && <p className="mt-3 text-sm text-muted-foreground">{f.a}</p>}
                   </div>
                   <span
-                    className="mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border"
-                    style={isOpen ? { borderColor: "var(--terracotta)", color: "var(--terracotta)" } : {}}
+                    className={`mt-1 grid h-7 w-7 shrink-0 place-items-center rounded-full border ${isOpen ? "border-primary text-primary" : ""}`}
                   >
                     {isOpen ? <Minus className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
                   </span>
@@ -414,18 +403,17 @@ function FinalCTA() {
   return (
     <section className="container-page mt-32">
       <div
-        className="relative overflow-hidden rounded-3xl border border-border p-10 text-center md:p-16"
-        style={{ background: "rgba(217,108,74,0.06)", borderColor: "rgba(217,108,74,0.2)" }}
+        className="relative overflow-hidden rounded-3xl border border-primary/20 p-10 text-center md:p-16 bg-primary/5"
       >
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-50"
-          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(217,108,74,0.15) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0, 82, 212, 0.1) 0%, transparent 70%)" }}
         />
         <div className="relative">
           <h2 className="mx-auto max-w-3xl text-3xl font-semibold md:text-5xl">
             Have a project in mind?{" "}
-            <span style={{ color: "var(--terracotta)" }}>Let's build it.</span>
+            <span className="text-primary">Let's build it.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Start with a free discovery call. Fixed price, no fluff, no surprises.
